@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+<head>
+<link rel="shortcut icon" href="../image/eriri.ico">
+<link rel="stylesheet" href="../CSSbase.css">
+<script src="../jquery-3.6.1.min.js"></script>
+<meta charset="utf-8">
+<title>放映室</title>
+<style>
+	.tablet{
+	opacity: 1;
+	border-radius: 12px;
+	margin-top: 85px;
+	width: 1200px;
+	border: 0;
+	align: center;
+	background-image: url("../image/bgx.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	}
+.playbutton{
+		width: 100px;
+		height:40px;
+		background-color: bisque;
+		transition: .6s;
+		border: 0;
+		border-radius: 6px;
+		font-weight:bolder;
+	}
+	@keyframes inshow{
+		0%{opacity: 0;}
+		20%{opacity: 1;transform: scale(1.1);}
+		80%{opacity: 1;transform: scale(1.1);}
+		100%{opacity: 0;transform: scale(0);}
+	}
+</style>
+</head>
+
+<body>
+<div id="inshowback"></div>
+<img id="inshow" src="../image/lnovelin.gif">
+<div id="imgbgs">
+<img  src="../image/bg1.jpg">
+<img  src="../image/bg2.png">
+<img  src="../image/bg3.png">
+<img  src="../image/bg4.png">
+</div>
+<div class="header w" >
+<img  class="logol" id="hxkgd" src="../image/hxkgood.webp">
+		<div class="treeflow">
+	<img src="../image/stree.png" width="80px">
+	<div class="petal1"></div>
+	<div class="petal1"></div>
+	<div class="petal1"></div>
+	<div class="petal1"></div>
+	<div class="petal2"></div>
+	<div class="petal2"></div>
+	<div class="petal2"></div>
+	<div class="petal2"></div>
+		</div>
+	</div>
+<div class="nav">
+			<ul>
+				<a href="../index.html"><li>
+					<p><img width="30px" src="../image/home.png"><br>首<br>页</p>
+				</li></a>
+				<a href="building.html"><li>
+					<p>聊<br>天<br>室</p>
+				</li></a>
+				<a href="tele.html"><li>
+					<p>放<br>映<br>室</p>
+				</li></a>
+			</ul>
+			<div>
+<img class="logor" id="hxkcl"
+src="../image/hxkcool.png">
+		</div>
+	</div>
+
+<center><div class="tablet">
+<center><table>
+	<center><h1>且停亭处且停停</h1>
+	<h2 style="color: red"><strong>注意！</strong>由于Gitee仓库大小限制，页面功能暂时改为选择播放当前本地文件。</h2></center>
+	<tr>
+	<td colspan="3">
+	<input type="file" id="file" onchange="onInputFileChange()">
+	<video id="iscream" width="1080px" height="720px" controls autoplay loop>Failed!</video></td>
+	<td>
+		<h2>播放列表</h2>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<button  id="p1" class="playbutton big boxshadow">祈愿峰峦天晴</button>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<button id="p3" class="playbutton big boxshadow">等待添加中</button>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+	</td>
+	</tr>
+	</table></center>
+</div>
+</center>
+<script>
+$(document).ready(function(){
+		$("#p1").click(function(){
+	$("#iscream").attr("src","../image/praysun.mp4");
+	$("#iscream").attr("autoplay","true");
+	});
+		$("#p2").click(function(){
+	$("#iscream").attr("src","../image/latewing.mp4");
+	$("#iscream").attr("autoplay","true");
+	});
+	});
+	
+</script>
+<script>
+function onInputFileChange() {
+      var file = document.getElementById('file').files[0];
+      var url = URL.createObjectURL(file);
+      console.log(url);
+      document.getElementById("iscream").src = url;
+}
+</script>
+</body>
+</html>

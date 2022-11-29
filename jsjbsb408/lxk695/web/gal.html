@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" href="../CSSbase.css">
+<script src="../jquery-3.6.1.min.js"></script>
+<meta charset="utf-8">
+<title>gal.html</title>
+<script>
+$(document).ready(function(){
+$("img.image1").hover(function(){
+    $(this).addClass("blur");
+},function(){
+	$(this).removeClass("blur");
+});
+});
+$(document).ready(function(){
+$("#hxkgd").off().click(function(){
+    $(this).replaceWith("<img src='../image/hxkcool.jpg' id='hxkcl' class='logo'>");
+});
+});
+$("#hxkcl").off().click(function(){
+	$(this).replaceWith("<img src='../image/hxkgood.webp' id='hxkgd' class='logo'>")
+});
+</script>
+</head>
+
+<body>
+<div class="header w" >
+	<div>
+			<img class="logo" id="hxkgd" src="../image/hxkgood.webp">
+		</div>
+		<div class="user">
+			<img src="../image/" style="vertical-align: middle">
+		</div>
+	</div>
+<div class="nav">
+			<ul>
+				<a href="../index.html"><li>
+					<p>首<br>页</p>
+				</li></a>
+				<a href="web/lime.html"><li>
+					<p>聊<br>天<br>室</p>
+				</li></a>
+				<a href="web/tele.html"><li>
+					<p>放<br>映<br>室</p>
+				</li></a>
+			</ul>	 
+	</div>
+<div align="center">
+<table bgcolor="#99D4F7" class="table0">
+	<thead>
+		<th align="center" class="biaoti">
+		~欢迎来到Galgame分区~
+		</th>
+		<br>
+	</thead>
+	<tbody>
+		<tr>
+			<td align="left" style="font-size: 30px;margin-left: 100px">绝赞推荐中：</td><br>		
+		</tr>
+		<tr>
+			<td>
+			</td>
+			<td>
+			</td>
+		</tr>
+	
+	</tbody>
+	<tfoot>
+		<td align="center" style="font-family: allura;font-size: 12px;">What is matter?<br>
+		--Never mind.</td>
+	</tfoot>
+</div>
+	
+	
+	
+</table>
+</body>
+</html>

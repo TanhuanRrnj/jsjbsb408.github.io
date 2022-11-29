@@ -1,0 +1,371 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jsjbsb408</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		li{
+			list-style: none;
+		}
+		a{
+			text-decoration: none;
+		}
+		.w{
+        width:100%;
+        margin-top: 0;
+    }
+    .header{
+    height: 80px;
+    background: #FF0076;
+	position:fixed;
+	top: 0px;
+	border-bottom-left-radius: 12px;
+	border-bottom-right-radius: 12px;
+	z-index: 3;
+	animation: headershow 5s;
+    }
+		@keyframes headershow{
+			0%{opacity: 0;transform: scaleX(0)}
+			100%{opacity: 1;transform: scaleX(1)}
+		}
+		.nav{
+        position: fixed;
+		top: 0px;
+		float: left;
+        margin-left: 190px;
+		z-index: 3;
+    }
+.nav ul li{
+        float: left;
+        margin: 0 15px;
+		width: 80px;
+		height: 100px;
+		position: relative;
+		border-bottom-left-radius: 12px;
+		border-bottom-right-radius: 12px;
+		background-color: antiquewhite;
+		transition: .4s;
+}
+.nav ul li:hover{
+	box-shadow: 0 0 10px 10px cornflowerblue;
+	transform: scale(1.1);
+}
+    .nav ul li p{
+        text-align: center;
+		font-size: 22px;
+		font-weight: bold;
+		margin-top: 3px;
+		color:brown;
+    }
+		.logol{
+    margin-top:0px;
+	left: 0;
+    position:fixed;
+	width: 80px;
+	height: 80px;
+	transition: 2s;
+	animation: open2 10s;
+}
+.logor{
+    top: 0;
+	right:0;
+    position: fixed;
+	width: 80px;
+	height: 80px;
+	transition: 2s;
+	z-index: 3;
+	animation: open1 10s;
+}
+		@keyframes open1{
+			100%{
+				transform: rotate(720deg);
+			}
+		}
+		@keyframes open2{
+			100%{
+				transform: rotate(-720deg);
+			}
+			}
+.logol:hover{
+	transform: rotate(-720deg) scale(0);
+	opacity: 0;
+}
+.logor:hover{
+	transform: rotate(720deg) scale(0);
+	opacity: 0;
+}
+		.bt1{
+			position: fixed;
+			top: 0;
+			left: 30%;
+			padding: 20px;
+			height: 40px;
+			width: 500px;
+			background: bisque;
+			color:coral;
+			border-radius:12px
+		}
+.treeflow{
+	position: fixed;
+	top: 0;
+	right: 200px;
+}
+.petal1:nth-of-type(1){
+	left:calc(5px);
+	animation-duration:1s
+}
+.petal1:nth-of-type(2){
+	left:calc(15px);
+	animation-delay:2s
+}
+.petal1:nth-of-type(3){
+	left:calc(30px);
+	animation-duration:3s
+}
+.petal1:nth-of-type(4){
+	left:calc(20px);
+	animation-duration:4s
+}
+.petal2:nth-of-type(1){
+	left:calc(51px);
+	animation-duration:1s
+}
+.petal2:nth-of-type(2){
+	left:calc(25px);
+	animation-delay:2s
+}
+.petal1{
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	top: 40px;
+	bottom: auto;
+	left:1200px;
+	right: auto;
+	border-radius: 50%;
+	background: pink;
+	animation: petalfall1 3s linear infinite ;
+	animation-delay: 10s;
+	box-shadow: 0px 0px 3px white; 
+	opacity: 0;
+}
+.petal2{
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	top: 40px;
+	bottom: auto;
+	left:50px;
+	right: auto;
+	border-radius: 50%;
+	background: pink;
+	animation: petalfall2 3s ease infinite ;
+	animation-delay: 10s;
+	box-shadow: 0px 0px 3px white; 
+	opacity: 0;
+}
+@keyframes petalfall1{
+	5%{opacity: 1;}
+	20%{left: -25px;}
+	70%{left: 100px;}
+	100%{
+		top: 400px;
+		opacity: 0;
+	}
+}
+@keyframes petalfall2{
+	5%{opacity: 1;}
+	40%{left: 80px;}
+	90%{left: -70px;}
+	100%{
+		top: 300px;
+		opacity: 0;
+	}
+}
+		.bgshow{
+			width: 100%;
+			height: 100%;
+			position: fixed;
+			z-index: -1;
+		}
+		.bgshow img{
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			animation: bgshow1 10s;
+			transform-origin: 80%;
+		}
+		@keyframes bgshow1{
+			0%{opacity: 0;}
+			80%{transform: scaleX(1.05) scaleY(1.05);}
+			100%{opacity: 1;transform: scale(1);}
+		}
+
+	#bigpetal1{
+	position:fixed;
+	top: 200px;
+	left: 200px;	
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	background: pink;
+	box-shadow: 5px 10px 20px floralwhite; 
+	animation: petalshow1 15s;
+	transition: .4s;
+		}
+	#bigpetal2{
+	position:fixed;
+	width: 150px;
+	display: flex;
+	height: 150px;
+	top: 300px;
+	right: 300px;
+	border-radius: 50%;
+	background: pink;
+	box-shadow: 5px 10px 20px floralwhite;
+	animation: petalshow1 15s;
+	transition: .4s;
+		}
+		#bigpetal3{
+	position: fixed;
+	width: 150px;
+	height: 150px;
+	top: 600px;
+	left: 600px;
+	border-radius: 50%;
+	background: pink;
+	box-shadow: 5px 10px 20px floralwhite; 	
+	animation: petalshow1 15s;
+	transition: .4s;
+		}
+		#bigpetal4{
+	position: fixed;
+	width: 150px;
+	height: 150px;
+	top: 200px;
+	left: 600px;
+	border-radius: 50%;
+	background: pink;
+	box-shadow: 5px 10px 20px floralwhite; 	
+	animation: petalshow1 15s;
+	transition: .4s;
+		}
+		#bigpetal5{
+	position: fixed;
+	width: 150px;
+	height: 150px;
+	top: 400px;
+	left: 800px;
+	border-radius: 50%;
+	background: pink;
+	box-shadow: 5px 10px 20px floralwhite; 	
+	animation: petalshow1 15s;
+	transition: .4s;
+		}
+		.name{
+	text-align: center;
+	margin: 20px;
+	font-size: 42px;
+	color: crimson;	
+		}
+		@keyframes petalshow1{
+			0%{opacity: 0;}
+			40%{opacity: 0;transform: scale(0)}
+			100%{opacity: 1;}
+		}
+		#bigpetal3:hover{
+			transform: scale(1.2);
+			box-shadow: 0 0 10px 40px floralwhite;
+			transition: .4s;
+		}
+		#bigpetal2:hover{
+			transform: scale(1.2);
+			box-shadow: 0 0 10px 40px floralwhite;
+			transition: .4s;
+		}
+		#bigpetal1:hover{
+			transform: scale(1.2);
+			box-shadow: 0 0 10px 40px floralwhite;
+			transition: .4s;
+		}
+		#bigpetal4:hover{
+			transform: scale(1.2);
+			box-shadow: 0 0 10px 40px floralwhite;
+			transition: .4s;
+		}
+		#bigpetal5:hover{
+			transform: scale(1.2);
+			box-shadow: 0 0 10px 40px floralwhite;
+			transition: .4s;
+		}
+		#inshowback{
+		position: fixed;
+		overflow: hidden;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color:black;
+		transform-origin: 50% 100%;
+		animation: inshowback 8s;
+		animation-fill-mode: forwards;
+		z-index: 7;
+	}
+	@keyframes inshowback{
+		0%{opacity: 1;left: 0;}
+		50%{opacity: 0;left: 0;}
+		100%{opacity: 0; left: 100%;}
+	}
+    </style>
+</head>
+
+<body>
+<div id="inshowback"></div>
+<div class="bgshow">
+	<img src="jsjbsb408/image/bg1.jpg">
+	</div>
+<div class="header w" >
+<img  class="logol" id="hxkgd" src="jsjbsb408/lxk695/image/hxkgood.webp">
+<div class="nav">
+			<ul>
+				<a href="http://ljr328.gitee.io/bsb"><li>
+					<p><img width="30px" src="jsjbsb408/lxk695/image/home.png"><br>班级<br>主页</p>
+				</li></a>
+			</ul>
+			</div>
+<center>
+	<div  class="bt1">
+	<h1>欢迎来到Dorm408的网页导航~</h1>
+	<i><small><h6>混寝407并入408寝室</h6></small></i>
+	</div>	
+  </center>
+<div class="treeflow">
+<img src="jsjbsb408/lxk695/image/stree.png" width="80px">
+	<div class="petal1"></div>
+	<div class="petal1"></div>
+	<div class="petal1"></div>
+	<div class="petal1"></div>
+	<div class="petal2"></div>
+	<div class="petal2"></div>
+		</div>
+	<div>
+<img class="logor" id="hxkcl"
+src="jsjbsb408/lxk695/image/hxkcool.png">
+	</div>
+	</div>
+
+	<div id="bigpetal3"><center><a href="jsjbsb408/lxk695/index.html" target="_blank"><li>
+		<div class="name" >刘湘焜</div></li></a></center></div>
+	<div id="bigpetal2"><center><a href="jsjbsb408/wcy699/wcy699/Index.html" target="_blank"><li>
+		<div class="name">温晨阳</div></li></a></center></div>
+	<div id="bigpetal1"><center><a href="jsjbsb408/hzx691/index.html" target="_blank"><li>
+		<div class="name">何泽旭</div></li></a></center></div>
+	<div id="bigpetal4"><center><a href="jsjbsb408/zjh/我开发的网站/课上作业--关于香港流行文化鉴赏.html" target="_blank"><li>
+		<div class="name">张景皓</div></li></a></center></div>
+	<div id="bigpetal5"><center><a href="http://jzyxte.gitee.io/xinshengshijian" target="_blank"><li>
+		<div class="name">郑兴濠</div></li></a></center></div>
+</body>
+</html>

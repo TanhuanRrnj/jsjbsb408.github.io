@@ -1,0 +1,162 @@
+<!doctype html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WCY699：MyHomePage</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Space Mono', monospace;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+        }
+
+        .wrapper{
+            width: 600px;
+            margin: 10vh auto;
+        }
+
+        h1{
+            margin-bottom: 20px;
+            text-align:center;
+        }
+
+        input{
+            display: none;
+        }
+
+        label{
+            display: flex;
+            width: 100%;
+            height: 50px;
+            cursor: pointer;
+            border: 3px solid #3E474F;
+            user-select: none;
+        }
+
+        label div:first-child{
+            width: 100%;
+            line-height: 45px;
+            margin-left: 10px;
+            font-size: 1.2em;
+        }
+
+        .cross{
+            margin-right: 15px;
+            margin-top: 3px;
+        }
+
+        .cross::before,
+        .cross::after{
+            content: '';
+            border-top: 2px solid #3E474F;
+            width: 15px;
+            display: block;
+            margin-top: 18px;
+            transition: .3s;
+        }
+
+        .cross::after{
+            transform: rotate(90deg);
+            margin-top: -2px;
+        }
+
+        input:checked~label .cross::before{
+            transform: rotate(180deg);
+        }
+
+        input:checked~label .cross::after{
+            transform: rotate(0deg);
+        }
+
+        .content{
+            box-sizing: border-box;
+            font-size: 0.9em;
+            margin: 10px 10px;
+            max-height: 0px;
+            overflow: hidden;
+            transition: max-height,.5s;
+        }
+
+        input:checked~.content{
+            max-height: 400px;
+            transition: max-height,1s;
+        }
+        
+        .SecondaryMenus{
+            margin-top: 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height,.5s;
+        }
+
+        .SecondaryMenus label{
+            border: none;
+            box-shadow: none;
+            margin: 0;
+        }
+
+        input:checked~.SecondaryMenus{
+            max-height: 400px;
+            border-bottom: 2px solid #3E474F;
+            transition: 1s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>WCY699: My HomePage</h1>
+        <div class="wrap-1">
+            <input type="radio" id="tab-1" name="tabs">
+            <label for="tab-1">
+                <div>Login</div>
+                <div class="cross"></div>
+            </label>
+            <div class="content"><a href="web/Login.html">Please input your Telephone,the passwordis the last six digits of the student number</a></div>
+        </div>
+
+        <div class="wrap-2">
+            <input type="radio" id="tab-2" name="tabs">
+            <label for="tab-2">
+                <div>Carousel</div>
+                <div class="cross"></div>
+            </label>
+            <div class="content"><a href="web/Carousel.html">Carousel is a slide show that loops through a series of content, built using css3d conversion and a little JavaScript. It can handle a series of images, text, or custom tags. It also includes support for previous/next controls and indicators.</a></div>
+        </div>
+
+        <div class="wrap-3">
+            <input type="radio" id="tab-3" name="tabs">
+            <label for="tab-3">
+                <div>Special Effects</div>
+                <div class="cross"></div>
+            </label>
+            <div class="SecondaryMenus">
+                <div class="SecondaryMenu-wrap">
+                    <input type="radio" id="SecondaryMenu-1" name="SecondaryMenu">
+                    <label for="SecondaryMenu-1">
+                        <div>3D Rotation</div>
+                        <div class="cross"></div>
+                    </label>
+                    <div class="content"><a href="web/3D Rotation.html">The high-speed rotating RGB color wheel built into the projector provides different RGB color configurations for the left and right eyes. Through the RGB color separation glasses, the left and right eyes can see different pictures to produce a three-dimensional effect.</a></div>
+                </div>
+
+                <div class="SecondaryMenu-wrap">
+                    <input type="radio" id="SecondaryMenu-2" name="SecondaryMenu">
+                    <label for="SecondaryMenu-2">
+                        <div>Magazine special efects</div>
+                        <div class="cross"></div>
+                    </label>
+                    <div class="content"><a href="web/Magazine special effects.html">Special effects are illusions or visual tricks used in the theatre, film, television, video game, amusement park and simulator industries to simulate the imagined events in a story or virtual world.</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
